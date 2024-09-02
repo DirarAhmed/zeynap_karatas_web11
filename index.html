@@ -18,31 +18,30 @@
    <div class="loading-screen" id="loadingScreen">
     <div class="loader"></div>
 </div>
-    <section class="financial-program-section text-light fade-in">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Image Section -->
-                <div class="col-md-4 text-center">
-                    <img src="imags/z4.png" alt="استشارات مالية" class="img-zoom">
-                </div>
-                <!-- Text Section -->
-                <div class="col-md-8">
-                    <h1 class="program-title mb-3">البرنامج التدريب الشخصي مع كوتش زينب</h1>
-                    <h2 class="sub-title">الاستشارات المالية والتداول الاحترافي للمهتمين بالاستثمار وتحقيق أهدافهم المالية </h2>
-                </div>
+   <section class="financial-program-section text-light fade-in">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Image Section -->
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="imags/z4.png" alt="استشارات مالية" class="img-fluid img-zoom">
             </div>
-            <div class="row mt-4">
-                <div class="col-12">
-                    <div class="info-box p-4 fade-in">
-                        <h3 class="info-title">تحت تدريب الكوتش زينب</h3>
-                        <h3 class="info-title">سوف أكون معك 5اسابيع من تدريب بأسواق المالية</h3>
-                        <p class="program-description"> حان الان تبدأ رحلتك نحوة  ثراء خطة تعليم نظري +خطة تعليم عملي خطة متابعة واتقان تدريبي رح يقدملك بناء استثمارية تراكمية أرشاد شخصي مني أسرار التداول ومكالمات أسبوعية</p>
-                    </div>
+            <!-- Text Section -->
+            <div class="col-md-8">
+                <h1 class="program-title mb-3">البرنامج التدريب الشخصي مع كوتش زينب</h1>
+                <h2 class="sub-title animate-fade-in-up" id="typed-text"></h2>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="info-box p-4 fade-in">
+                    <h3 class="info-title">تحت تدريب الكوتش زينب</h3>
+                    <h3 class="info-title">سوف أكون معك 5 أسابيع من تدريب بأسواق المالية</h3>
+                    <p class="program-description">حان الآن تبدأ رحلتك نحو الثراء: خطة تعليم نظري + خطة تعليم عملي، خطة متابعة وإتقان تدريبي ستقدّم لك بناء استثمارية تراكمية، إرشاد شخصي مني، أسرار التداول، ومكالمات أسبوعية.</p>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- New Trading Section -->
     <section class="trading-info-section text-light fade-in">
         <div class="container">
@@ -493,7 +492,25 @@
           });
       });
 
-      
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+    var text = "الاستشارات المالية والتداول الاحترافي للمهتمين بالاستثمار وتحقيق أهدافهم المالية";
+    var i = 0;
+    var speed = 50; // السرعة بالمللي ثانية
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typed-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+});
    
      </script>
 </body>
